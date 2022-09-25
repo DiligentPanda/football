@@ -9,6 +9,7 @@ include Dockerfile Dockerfile_examples .dockerignore CHANGELOG CONTRIBUTING.md r
 recursive-include third_party/fonts *
 recursive-include third_party/gfootball_engine *
 recursive-exclude third_party/gfootball_engine *.a *.so cmake_install.cmake Makefile
+exclude gfootball_engine
 
 prune third_party/gfootball_engine/CMakeFiles
 prune third_party/gfootball_engine/cmake-build-*

@@ -1,4 +1,5 @@
 # When updating this file don't forget to update MANIFEST.in
+gfootball_engine
 
 # Python related files
 build/
