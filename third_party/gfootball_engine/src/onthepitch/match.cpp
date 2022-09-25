@@ -765,7 +765,7 @@ void Match::GetTeamState(SharedInfo *state,
   team.clear();
   std::vector<Player *> players;
   teams[team_id]->GetAllPlayers(players);
-  auto main_player = teams[team_id]->MainSelectedPlayer();
+  auto designated_player = teams[team_id]->GetDesignatedTeamPossessionPlayer();
   for (auto player : players) {
     DO_VALIDATION;
     auto controller = player->ExternalController();
@@ -801,7 +801,7 @@ void Match::GetTeamState(SharedInfo *state,
         state->ball_owned_player = team.size();
         state->ball_owned_team = GetLastTouchTeamID();
       }
-      info.designated_player = player == main_player;
+      info.designated_player = player == designated_player;
       team.push_back(info);
     }
   }
